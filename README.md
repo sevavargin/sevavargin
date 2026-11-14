@@ -4,35 +4,57 @@
 
 ## Технологии
 
-**Python · Pandas · NumPy · Scikit-learn · PyTorch · XGBoost · SQL · FastAPI · PostgreSQL · Docker · Git**
+- **Языки:** Python, SQL, C++
+- **Machine Learning:** Scikit-learn, XGBoost, LightGBM, CatBoost
+- **Deep Learning:** PyTorch, CNN
+- **Data Analysis:** Pandas, NumPy, Matplotlib
+- **Инструменты:** PostgreSQL, Git, Docker, Jupyter
 
-## Основные проекты
+
+## Проекты
+
+### Airline Satisfaction — Kaggle Competition
+
+**Стек:** `Python` `LightGBM` `XGBoost` `CatBoost` `RealMLP` `TabPFN` `Scikit-learn`
+
+Разработал ML-пайплайн для предсказания удовлетворённости пассажиров авиакомпаний на датасете из ~700 тысяч объектов.
+
+- Реализовал 5-fold Stratified K-Fold валидацию с Out-of-Fold предсказаниями и защитой от утечек данных.
+- Провёл feature engineering, исследовал Target Encoding и оценил влияние новых признаков на качество моделей.
+- Обучил и сравнил несколько семейств моделей: градиентный бустинг, табличные нейросети и TabPFN.
+- Реализовал ансамблирование моделей и оптимизацию итоговых предсказаний под ROC AUC.
+
+**Результат:** OOF ROC AUC = **0.96221**, Public Leaderboard ROC AUC = **0.96187**.
 
 ### Guitar FX Parameter Predictor
 
-ML-система для определения параметров аудиоэффектов Reverb и Chorus по обработанной гитарной аудиозаписи.
+**Стек:** `Python` `PyTorch` `XGBoost` `librosa` `NumPy` `Scikit-learn`
 
-`PyTorch · XGBoost · librosa · pedalboard · scikit-learn`
+Разработал ML-систему для автоматического определения четырёх параметров гитарных аудиоэффектов Reverb и Chorus по обработанным аудиозаписям.
 
-### Insight-Flow
+- Сгенерировал датасет из 3 450 аудиопримеров с различными комбинациями параметров эффектов.
+- Реализовал обработку аудио, извлечение спектральных признаков и построение mel-спектрограмм.
+- Обучил модели многомерной регрессии на XGBoost и свёрточную нейронную сеть (CNN) на PyTorch.
+- Организовал разделение данных по исходным аудиозаписям для предотвращения утечки между обучением и тестированием.
+- Провёл сравнение архитектур и анализ качества предсказания отдельных параметров.
 
-Backend AI-платформы для работы аналитика: управление проектами и файлами, анализ документов, построение визуализаций и генерация отчётов.
+**Результат:** Mean Test R² = **0.802**, снижение среднего MAE на **29%**.
 
-`FastAPI · PostgreSQL · SQLAlchemy · Alembic · Docker`
+### [Customer Support Ticket Classification](https://github.com/sevavargin/Customer-support)
 
-### Customer Support Classification
+**Стек:** `Python` `Scikit-learn` `Pandas` `SQL` `TF-IDF` `Matplotlib`
 
-Классификация обращений клиентов с использованием методов NLP.
-**Accuracy: 85%**
+Разработал NLP-модель для автоматической классификации клиентских обращений по пяти категориям: банковские карты, кредитная история, взыскание задолженностей, кредиты и розничный банкинг.
 
-`Scikit-learn · TF-IDF · Logistic Regression · NLP`
+- Провёл исследовательский анализ данных и подготовку текстов для обучения.
+- Реализовал преобразование текстовых обращений в числовые признаки с помощью TF-IDF (unigrams и bigrams).
+- Обучил и сравнил модели классификации, выбрав Logistic Regression в качестве итогового решения.
+- Оценил качество на независимой тестовой выборке из 24 895 обращений, проанализировал метрики по отдельным классам.
 
-### Walmart Sales Analysis
+**Результат:** Accuracy = **85.1%**, Macro F1 = **0.84**.
 
-Исследовательский анализ данных о продажах, статистическая проверка гипотез и интерактивная визуализация результатов.
 
-`Pandas · SciPy · Streamlit · Data Visualization`
+## Контакты
 
-## Сейчас
-
-Углубляю знания в **Machine Learning и Deep Learning**, изучаю PyTorch и развиваю проекты с упором на полный ML-пайплайн: от подготовки данных и экспериментов до API и воспроизводимого развёртывания.
+- **Telegram:** [@SFVargin](https://t.me/SFVargin)
+- **Email:** varginseva@yandex.ru
