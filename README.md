@@ -40,7 +40,7 @@
 
 **Результат:** Mean Test R² = **0.802**, снижение среднего MAE на **29%**.
 
-### [Customer Support Ticket Classification](https://github.com/sevavargin/Customer-support)
+### Customer Support Ticket Classification
 
 **Стек:** `Python` `Scikit-learn` `Pandas` `SQL` `TF-IDF` `Matplotlib`
 
